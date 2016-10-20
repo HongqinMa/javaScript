@@ -1,5 +1,8 @@
 #sum.common.js
 - 冒泡排序
+- 事件相关
+- 随机数相关（一个随机数、随机数组、随机颜色）
+- 
 
 
 
@@ -27,7 +30,7 @@
 
 
 
-#2. 得到诸如[{attr1:2,attr2:3}, {attr1:1,attr2:2}]数组中各对象的attr1属性中最大的一个（比较勉强的方法）
+#2. 得到诸如[{attr1:2,attr2:3}, {attr1:1,attr2:2}]数组中各对象的attr1属性中最大的一个（一个在特殊场合用的方法）
 >**用到apply方法、ES5的map方法（☆☆☆☆）**
 > 
 	/**
@@ -116,7 +119,49 @@
 	        }
 	    }
 	})();
-
+# 6. 随机的颜色
+>
+	/**
+	 * METHOD 获取随机的颜色数组
+	 * @param count 需要获取的颜色数目
+	 * @returns {Array}
+	 */
+	MHQ.getColor = function (count) {
+	    var colorSingle;
+	    var colorArr = [];
+	    var color = "#";
+	    for (var i = 0; i < count; i++) {
+	        for (var j = 0; j < 6; j++) {
+	            var colorRandom = MHQ.getRandom(16);
+	            switch (colorRandom) {
+	                case 10:
+	                    colorSingle = "A";
+	                    break;
+	                case 11:
+	                    colorSingle = "B";
+	                    break;
+	                case 12:
+	                    colorSingle = "C";
+	                    break;
+	                case 13:
+	                    colorSingle = "D";
+	                    break;
+	                case 14:
+	                    colorSingle = "E";
+	                    break;
+	                case 15:
+	                    colorSingle = "F";
+	                    break;
+	                default:
+	                    colorSingle = colorRandom;
+	            }
+	            color += colorSingle;
+	        }
+	        colorArr.push(color);
+	        color = "#";
+	    }
+	    return colorArr;
+	};
 
 
 
