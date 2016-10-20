@@ -34,13 +34,12 @@
  *      MHQ.getRandom(min, max);  获取一个随机整数 Math.random(); 中的参数可以是一个，考虑了参数是一个的情况
  *      MHQ.getColor(count); 获取随机的颜色数组
  *      MHQ.sortArr(arr) 数组冒泡排序
- 
+>
 	/**
 	 * Created by mhq on 2016/10/16.
 	 */
 	// 命名空间
 	var MHQ = {};
-	
 	/**
 	 * OBJECT 定义一个ajax工具
 	 * @type {{ajax, get, post}}
@@ -104,7 +103,6 @@
 	                        }
 	                        /*执行成功回调函数*/
 	                        options.success && options.success(result);
-	
 	                    } else {
 	                        /*失败*/
 	                        options.error && options.error({status: xhr.status, statusText: xhr.statusText});
@@ -130,7 +128,8 @@
 	        }
 	    }
 	})();
-	
+>
+>	
 	/**
 	 * OBJECT 事件处理对象，封装了绑定事件的方法
 	 * @returns {{addSeveralEvent: addSeveralEvent, addEvent: addEvent, removeEvent: removeEvent}}
@@ -187,7 +186,8 @@
 	        }
 	    };
 	})();
-	
+>
+>
 	/**
 	 * OBJECT DOM元素工具类
 	 * @type {{replaceClassName, getInnerText, setInnerText, getNextElement, getPreviousElement, getFirstElement, getLastElement, my$}}
@@ -203,7 +203,6 @@
 	        replaceClassName: function (element, oldStr, newStr) {
 	            element.className = element.className.replace(oldStr, newStr);
 	        },
-	
 	        /**
 	         * 获取DOM元素内部文本的兼容方法
 	         * @param element DOM元素
@@ -216,7 +215,6 @@
 	                return element.textContent;
 	            }
 	        },
-	
 	        /**
 	         * 设置DOM元素内部文本的兼容方法
 	         * @param element DOM元素
@@ -229,7 +227,6 @@
 	                element.textContent = content;
 	            }
 	        },
-	
 	        /**
 	         * 封装了获取元素的下一个兄弟元素的方法
 	         * @param element DOM元素
@@ -246,7 +243,6 @@
 	                return next;
 	            }
 	        },
-	
 	        /**
 	         * 封装了获取元素的上一个兄弟元素的方法
 	         * @param element DOM元素
@@ -263,7 +259,6 @@
 	                return previous;
 	            }
 	        },
-	
 	        /**
 	         * 封装寻找某个元素的第一个子元素的方法
 	         * @param element DOM元素
@@ -281,7 +276,6 @@
 	                return first;
 	            }
 	        },
-	
 	        /**
 	         * 封装寻找某个元素的最后一个子元素的方法
 	         * @param element DOM元素
@@ -299,7 +293,6 @@
 	                return last;
 	            }
 	        },
-	
 	        /**
 	         * 封装了通过id获取元素的方法
 	         * @param id
@@ -310,7 +303,8 @@
 	        }
 	    }
 	})();
-	
+>
+>
 	/**
 	 * OBJECT 获取指定格式的日期
 	 * @type {{getDate, transDateFormat}}
@@ -354,7 +348,8 @@
 	        }
 	    }
 	})();
-	
+
+>
 	/**
 	 * OBJECT 获取n个随机数 最终得到数组  object.getRandomArr 得到随机数的数组
 	 * 说明：因为要传递参数，所以不能用立即执行函数
@@ -381,7 +376,6 @@
 	        }
 	    }
 	})();
-	
 	/**
 	 * METHOD js 特效中的动画函数封装
 	 * @param element 要添加动画的元素
@@ -425,7 +419,8 @@
 	        }
 	    }, 10);
 	};
-	
+
+>
 	/**
 	 * CLASS 接口类：2个参数
 	 * @param interfaceName 接口名称
@@ -448,7 +443,8 @@
 	        this.methods.push(methodsArr[i]);
 	    }
 	};
-	
+
+>
 	/**
 	 * METHOD 获取随机的颜色数组
 	 * @param count 需要获取的颜色数目
@@ -490,7 +486,6 @@
 	    }
 	    return colorArr;
 	};
-	
 	/**
 	 * METHOD EXTEND 继承（原型继承，仅仅继承原型中的属性和方法） + call()/apply只继承 混合继承
 	 * @param {Object} sub 子类构造函数
@@ -515,7 +510,6 @@
 	        sup.prototype.constructor = sup;
 	    }
 	};
-	
 	/**
 	 * METHOD 接口校验
 	 * @param instanceSets  实例的集合，传入多个参数：第一个实现类的实例，第二个，第三个...接口实例
@@ -543,7 +537,6 @@
 	        }
 	    }
 	};
-	
 	/**
 	 * METHOD 获取属性的兼容方法
 	 * @param element 要获取属性的兼容方法
@@ -553,7 +546,6 @@
 	MHQ.getAttrValue = function (element, attr) {
 	    return element.currentStyle ? element.currentStyle[attr] : window.getComputedStyle(element, null)[attr];
 	};
-	
 	/**
 	 * METHOD 得到诸如[{attr1:2,attr2:3}, {attr1:1,attr2:2}]数组中各对象的attr1属性中最大的一个（仅适用于对象的attr1属性排序）
 	 * @param arr [{attr1:2,attr2:3}, {attr1:1,attr2:2}]
@@ -563,7 +555,6 @@
 	        return v.attr1;
 	    }));
 	};
-	
 	/**
 	 * METHOD 获取一个随机整数 Math.random(); 中的参数可以是一个，考虑了参数是一个的情况
 	 * @param min 随机数的范围的下限
@@ -577,7 +568,6 @@
 	    }
 	    return parseInt(Math.random() * (max - min) + min);
 	};
-	
 	/**
 	 * METHOD 数组冒泡排序
 	 * @param arr 需要排序的数组
@@ -600,66 +590,3 @@
 	    }
 	    return arr;
 	};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
