@@ -13,7 +13,6 @@
  *          getFirstElement  封装寻找某个元素的第一个子元素的方法
  *          getLastElement  封装寻找某个元素的最后一个子元素的方法
  *          my$  封装了通过id获取元素的方法
-
 - MHQ.eventUntil 事件处理对象，封装了绑定事件的方法
  *          addSeveralEvent(element, eventName, fn);  给一个元素同时多个事件
  *          addEvent(element, eventName, fn);  封装添加事件的方法
@@ -26,7 +25,6 @@
 ##类
  *      MHQ.Interface(interfaceName, methodsArr) 接口类
  *      verifyInterface(instanceSets) 接口校验方法
-
 ##METHOD:
  *      MHQ.animate(element, json, fn); js 特效中的动画函数封装
  *      MHQ.getAttrValue(element,attr);  获取属性的兼容方法
@@ -34,6 +32,9 @@
  *      MHQ.getRandom(min, max);  获取一个随机整数 Math.random(); 中的参数可以是一个，考虑了参数是一个的情况
  *      MHQ.getColor(count); 获取随机的颜色数组
  *      MHQ.sortArr(arr) 数组冒泡排序
+- 
+##代码段
+>
 >
 	/**
 	 * Created by mhq on 2016/10/16.
