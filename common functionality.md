@@ -25,7 +25,6 @@
 ##类
  *      MHQ.Interface(interfaceName, methodsArr) 接口类
  *      verifyInterface(instanceSets) 接口校验方法
-
 ##METHOD:
 - 方法
  *      MHQ.animate(element, json, fn); js 特效中的动画函数封装
@@ -34,7 +33,13 @@
  *      MHQ.getRandom(min, max);  获取一个随机整数 Math.random(); 中的参数可以是一个，考虑了参数是一个的情况
  *      MHQ.getColor(count); 获取随机的颜色数组
  *      MHQ.sortArr(arr) 数组冒泡排序
+<<<<<<< HEAD
 ##CODE:
+=======
+- 
+##代码段
+>
+>>>>>>> origin/master
 >
 	/**
 	 * Created by mhq on 2016/10/16.
